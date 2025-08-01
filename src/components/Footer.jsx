@@ -3,12 +3,12 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => (
   <footer className="bg-gray-900 text-gray-300 pt-12 pb-8">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 m-20">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
         {/* Company Info */}
         <div className="text-center md:text-left">
           <h3 className="text-white text-lg font-semibold mb-4">Dankal Industries</h3>
-          <p className="text-sm mb-4">
+          <p className="text-sm mb-4 ">
             Empowering growth across manufacturing, construction, and global trade through innovative solutions.
           </p>
           <div className="flex justify-center md:justify-start space-x-4">
@@ -20,8 +20,7 @@ const Footer = () => (
         <div className="text-center">
           <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
-            <li><a href="/services" className="hover:text-white transition-colors">Services</a></li>
+            <li><a href="/" className="hover:text-white transition-colors">Home</a></li>
             <li><a href="/projects" className="hover:text-white transition-colors">Projects</a></li>
             <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
           </ul>
@@ -45,7 +44,7 @@ const Footer = () => (
             </div>
             <div className="flex items-center justify-center md:justify-end">
               <MapPin className="w-4 h-4 mr-2 text-accent" />
-              <span>123 Industrial Way, City, Country</span>
+              <span>123 Industrial Way, Addis Ababa, Ethiopia</span>
             </div>
           </div>
         </div>
@@ -56,7 +55,7 @@ const Footer = () => (
           &copy; {new Date().getFullYear()} Dankal Industries PLC. All rights reserved.
         </p>
         <p className="text-xs mt-1 text-gray-600">
-          Registered in England No. 12345678 | VAT No. GB123456789
+          Registered in Ethiopia No. 12345678 | VAT No. GB123456789
         </p>
       </div>
     </div>

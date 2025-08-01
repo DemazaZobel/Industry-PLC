@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../assets/logo_light.png';
 import heroImage from '../assets/Manufacture/hero.jpg';
+import { Link } from 'react-router-dom';
 
 const HeroManufacture = () => {
   return (
@@ -27,10 +28,15 @@ const HeroManufacture = () => {
         <h1 className="text-primary text-5xl sm:text-6xl md:text-7xl lg:text-6xl font-extrabold drop-shadow-2xl tracking-wide leading-tight">
            Manufacturing
         </h1>
-        <p className="text-secondary mt-6 text-xl sm:text-2xl md:text-3xl font-light drop-shadow-lg max-w-4xl mx-auto">
+        <p className="text-secondary mt-6 text-xl sm:text-2xl md:text-3xl font-light drop-shadow-lg max-w-4xl mx-auto mb-10">
         Where Ethiopian Ingenuity Meets International Demand — Crafting, Packaging, and Delivering with Precision.        </p>
 
-        {/* Logo below the text */}
+        <Link
+              to={"/contact"}
+              className="bg-button/70 hover:bg-accent transition px-6 py-3 rounded-full text-white font-semibold shadow-md "
+            >
+            Connect With us
+            </Link>
        
       </div>
     </section>

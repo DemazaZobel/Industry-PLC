@@ -10,28 +10,28 @@ const services = [
     title: 'Industrial Solutions',
     description: 'State-of-the-art industrial machinery and process automation for maximum efficiency and productivity.',
     icon: industrial,
-    path: '/services/industrial-solutions',
-    stats: 'industry'
+    path: '/projects',
+    stats: 'Projects'
   },
   {
     title: 'Construction Management',
     description: 'Comprehensive project lifecycle management from planning to execution with precision engineering.',
     icon: construction,
-    path: '/services/construction-management',
+    path: '/construction',
     stats: 'construction'
   },
   {
     title: 'Global Trade',
     description: 'Seamless import/export solutions with optimized logistics and customs clearance.',
     icon: globalTrade,
-    path: '/services/global-trade',
+    path: '/cargo',
     stats: 'Import/Export'
   },
   {
     title: 'Manufacturing',
     description: 'ISO-certified production facilities delivering premium quality with sustainable practices.',
     icon: machine,
-    path: '/services/manufacturing',
+    path: '/manufacture',
     stats: 'Manufacturing'
   },
 ];

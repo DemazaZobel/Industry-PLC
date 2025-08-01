@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../assets/logo_light.png';
 import heroImage from '../assets/construction/construction.jpg';
-
+import { Link } from 'react-router-dom';
 const HeroConstruction = () => {
   return (
     <section className="relative w-full h-[70vh] sm:h-[85vh] md:h-screen overflow-hidden -mt-20">
@@ -27,11 +27,15 @@ const HeroConstruction = () => {
                 <h1 className="text-primary text-5xl sm:text-6xl md:text-7xl lg:text-6xl font-extrabold drop-shadow-2xl tracking-wide leading-tight">
         Construction
         </h1>
-        <p className="text-secondary mt-6 text-xl sm:text-2xl md:text-3xl font-light drop-shadow-lg max-w-4xl mx-auto">
+        <p className="text-secondary mt-6 text-xl sm:text-2xl md:text-3xl font-light drop-shadow-lg max-w-4xl mx-auto mb-10">
         Building Ethiopia’s Tomorrow — From Foundations to Finish, We Construct with Integrity, Innovation, and Impact.
         </p>
-
-        {/* Logo below the text */}
+        <Link
+              to={"/contact"}
+              className="bg-button/70 hover:bg-accent transition px-6 py-3 rounded-full text-white font-semibold shadow-md "
+            >
+            Connect With us
+            </Link>
        
       </div>
     </section>

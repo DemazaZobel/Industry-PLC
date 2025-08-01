@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import HeroHome from '../components/HeroHome';
 import Services from '../components/Services';
 import Projects from '../components/ProjectsCard';
@@ -11,12 +10,9 @@ import ContactUs from '../components/ContactForm';
 import GalleryPage from '../components/Gallary';
 
 const Home = () => (
-  <>
-   <div className="bg-background ">
-    <Helmet>
-      <title>Dankil | Home</title>
-      <meta name="description" content="Dankil Industrial, Construction, Manufacturing, and Import-Export Services" />
-    </Helmet>
+  <div className="bg-background">
+    <title>Dankil | Home</title>
+    <meta name="description" content="Dankil Industrial, Construction, Manufacturing, and Import-Export Services" />
     <HeroHome />
     <About />
     <Services />
@@ -25,9 +21,8 @@ const Home = () => (
     <GalleryPage />
     <TrustedBy />
     <Testimonials />
-     <ContactUs />
-    </div>
-  </>
+    <ContactUs />
+  </div>
 );
 
 export default Home;

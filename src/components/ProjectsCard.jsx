@@ -10,37 +10,37 @@ const projects = [
     title: 'Industrial Plant Expansion',
     description: 'Successfully expanded the capacity by 40% using advanced machinery.',
     imageUrl: factory,
-    link: '/projects/industrial-plant',
+    link: '/projects',
   },
   {
     title: 'International Logistics Network',
     description: 'Optimized import-export routes across multiple continents.',
     imageUrl: importexport,
-    link: '/projects/logistics-network',
+    link: '/projects',
   },
   {
     title: 'Eco-Friendly Manufacturing',
     description: 'Implemented sustainable manufacturing practices reducing waste.',
     imageUrl: machine,
-    link: '/projects/eco-manufacturing',
+    link: '/projects',
   },
   {
     title: 'Urban Construction Project',
     description: 'Delivered a high-rise commercial complex on time and under budget.',
     imageUrl: construction,
-    link: '/projects/urban-construction',
+    link: '/projects',
   },
   {
     title: 'Eco-Friendly Manufacturing',
     description: 'Implemented sustainable manufacturing practices reducing waste.',
     imageUrl: machine,
-    link: '/projects/eco-manufacturing',
+    link: '/projects',
   },
   {
     title: 'Urban Construction Project',
     description: 'Delivered a high-rise commercial complex on time and under budget.',
     imageUrl: construction,
-    link: '/projects/urban-construction',
+    link: '/projects',
   },
 ];
 

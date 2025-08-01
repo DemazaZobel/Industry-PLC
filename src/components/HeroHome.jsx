@@ -13,28 +13,28 @@ const slides = [
     title: "Building Strong Foundations",
     subtitle: "From roads to real estate, we deliver excellence.",
     image: { src: constructionImage, alt: "Construction" },
-    link: "/services/construction",
+    link: "/construction",
     buttonLabel: "Explore Construction",
   },
   {
     title: "Powering Progress",
     subtitle: "Modern solutions for industrial needs.",
     image: { src: industryImage, alt: "Industry" },
-    link: "/services/industy",
-    buttonLabel: "Explore Industry"
+    link: "/projects",
+    buttonLabel: "Explore Projects"
   },
   {
     title: "Bridging Borders",
     subtitle: "Global trade made seamless.",
     image: { src: containerTruckImage, alt: "Container and Truck" },
-    link: "/services/construction",
+    link: "cargo",
     buttonLabel: "Explore Import-Export"
   },
   {
     title: "Manufacturing Quality",
     subtitle: "Delivering precision-engineered products.",
     image: { src: manufacturingImage, alt: "Manufacturing" },
-    link: "/services/construction",
+    link: "manufacture",
     buttonLabel: "Explore Manufacturing"
   },
 ];

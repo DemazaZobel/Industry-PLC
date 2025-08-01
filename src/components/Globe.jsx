@@ -1,6 +1,5 @@
 import React from 'react';
 import globe from '../assets/global.png';
-import logo from '../assets/logo.png';
 
 import coffee from '../assets/ExportImport/dark-coffee-beans-bowl-brown-table.jpg';
 import sesame from '../assets/ExportImport/white-sesame-black-sesame-dark-background.jpg';
@@ -13,17 +12,18 @@ const tradeImages = [wheat, sugar, fuel, coffee, sesame, livestock];
 
 const Globe = () => {
   return (
-    <section className="w-full bg-background py- px-2 md:px-20 flex flex-col items-center space-y-20 select-none">
+    <section className="w-full bg-background px-4 md:px-20 py-16 flex flex-col items-center space-y-20 select-none">
 
       {/* Slogan */}
-     <div className="flex flex-col items-center text-center space-y-4 mt-10">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-primaryText tracking-wide">
-            D<span className='text-secondary '>A</span>NKAL Global Trade Solutions
+      <div className="flex flex-col items-center text-center space-y-4 mt-10">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-primaryText tracking-wide whitespace-nowrap">
+          D<span className="text-secondary">A</span>NKAL Global Trade Solutions
         </h2>
         <p className="text-lg sm:text-xl md:text-2xl text-secondary max-w-2xl">
           Connecting Ethiopia to the World through Reliable Import and Export Services
         </p>
       </div>
+
       {/* Globe & Lists Container */}
       <div className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-7xl w-full">
 
@@ -59,7 +59,7 @@ const Globe = () => {
 
       {/* Horizontal Scrolling Images */}
       <div className="w-full overflow-hidden mt-12">
-        <div className="flex animate-marquee-reverse space-x-14">
+        <div className="flex w-max animate-marquee-reverse space-x-14">
           {[...tradeImages, ...tradeImages].map((img, idx) => (
             <img
               key={idx}
@@ -71,15 +71,16 @@ const Globe = () => {
         </div>
       </div>
 
-      {/* Add marquee animation CSS */}
+      {/* Marquee and Spin Keyframes */}
       <style>{`
         @keyframes marquee-reverse {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
         }
         .animate-marquee-reverse {
-          animation: marquee-reverse 40s linear infinite;
+          animation: marquee-reverse 15s linear infinite;
         }
+
         @keyframes spin-slow {
           from { transform: rotate(0deg); }
           to { transform: rotate(360deg); }

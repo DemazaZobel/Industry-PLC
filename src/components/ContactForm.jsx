@@ -1,5 +1,63 @@
 import React from 'react';
-import park from '../assets/office.jpg'; // Example background image, replace with your own
+import park from '../assets/office.jpg';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { FaFacebookF, FaLinkedinIn, FaTelegramPlane, FaWhatsapp, FaInstagram } from 'react-icons/fa';
+
+
+
+const PhoneSVG = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="inline mr-3 text-secondary"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+    width={32}
+    height={32}
+    aria-hidden="true"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M3 5a2 2 0 012-2h1.586a1 1 0 01.707.293l2.414 2.414a1 1 0 01.293.707V9a1 1 0 01-1 1H7a10 10 0 0010 10v-2a1 1 0 011-1h1a1 1 0 011 1v3a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"
+    />
+  </svg>
+);
+
+const EmailSVG = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="inline mr-3 text-secondary"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+    width={32}
+    height={32}
+    aria-hidden="true"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M16 12H8m8-4H8m10 8v2a2 2 0 01-2 2H8a2 2 0 01-2-2v-2a2 2 0 012-2h8a2 2 0 012 2z" />
+  </svg>
+);
+
+const LocationSVG = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="inline mr-3 text-secondary"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+    width={32}
+    height={32}
+    aria-hidden="true"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z" />
+    <circle cx="12" cy="9" r="2.5" />
+  </svg>
+);
 
 const ContactUs = () => {
   return (
@@ -11,64 +69,60 @@ const ContactUs = () => {
         aria-hidden="true"
       ></div>
 
-      {/* Overlay form */}
-      <div className="relative z-10 flex flex-col justify-center items-center min-h-screen px-6 py-20">
-        <h2 className="text-5xl font-extrabold mb-6 text-center">Contact Us</h2>
-        <p className="mb-12 max-w-xl text-center text-gray-300">
-          We’d love to hear from you! Please fill out the form below and we will get back to you as soon as possible.
+      {/* Overlay content */}
+      <div className="relative z-10 flex flex-col justify-center items-center min-h-screen px-6 py-32 sm:py-40 md:py-48 text-center max-w-3xl mx-auto">
+        <h2 className="text-5xl font-extrabold mb-8 sm:mb-10">Contact Us</h2>
+        <p className="mb-16 sm:mb-20 text-gray-300 text-lg sm:text-xl leading-relaxed">
+          Let’s start a conversation. Reach out to us using the details below.
         </p>
 
-        <form className="bg-white bg-opacity-10 backdrop-blur-md rounded-xl p-10 max-w-lg w-full shadow-lg">
-          <div className="mb-6">
-            <label htmlFor="name" className="block mb-2 font-semibold text-white">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              className="w-full px-4 py-3 rounded-md bg-white bg-opacity-20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-accent focus:bg-opacity-40 transition"
-              placeholder="Your full name"
-            />
-          </div>
+        {/* Contact Info */}
+        <div className="space-y-6 mb-14 text-lg sm:text-xl font-medium">
+          <p className="flex items-center justify-center"><PhoneSVG  /> +251 912 345 678</p>
+          <p className="flex items-center justify-center"><EmailSVG /> info@dankilindustries.com</p>
+          <p className="flex items-center justify-center"><LocationSVG /> Addis Ababa, Ethiopia</p>
+        </div>
 
-          <div className="mb-6">
-            <label htmlFor="email" className="block mb-2 font-semibold text-white">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              className="w-full px-4 py-3 rounded-md bg-white bg-opacity-20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-accent focus:bg-opacity-40 transition"
-              placeholder="you@example.com"
-            />
-          </div>
 
-          <div className="mb-6">
-            <label htmlFor="message" className="block mb-2 font-semibold text-white">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              required
-              className="w-full px-4 py-3 rounded-md bg-white bg-opacity-20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-accent focus:bg-opacity-40 transition resize-none"
-              placeholder="Write your message here..."
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            className="w-full bg-accent hover:bg-secondary text-white font-semibold py-3 rounded-md shadow-md transition-colors"
+        {/* CTA Button with floating animation */}
+        <motion.div
+          animate={{ y: [0, -12, 0] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <Link
+            to="/contact"
+            className="bg-accent hover:bg-secondary transition-all duration-300 px-10 py-4 rounded-full text-white font-semibold shadow-xl"
           >
-            Send Message
-          </button>
-        </form>
+            Connect With Us
+          </Link>
+        </motion.div>
+
+
+        
       </div>
+      {/* Social Media Icons */}
+
+      <div className="flex gap-10 -mt-60 text-3xl justify-center text-accent">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-secondary transition-transform transform hover:scale-110 p-4">
+          <FaFacebookF />
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-secondary transition-transform transform hover:scale-110 p-4">
+          <FaLinkedinIn />
+        </a>
+        <a href="https://t.me/yourtelegramhandle" target="_blank" rel="noopener noreferrer" aria-label="Telegram" className="hover:text-secondary transition-transform transform hover:scale-110 p-4">
+          <FaTelegramPlane />
+        </a>
+        <a href="https://wa.me/yourwhatsappnumber" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="hover:text-secondary transition-transform transform hover:scale-110 p-4">
+          <FaWhatsapp />
+        </a>
+        <a href="https://instagram.com/yourinstagramhandle" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-secondary transition-transform transform hover:scale-110 p-4">
+          <FaInstagram />
+        </a>
+      </div>
+
+
     </section>
   );
 };

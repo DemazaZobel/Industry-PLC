@@ -60,7 +60,7 @@ const Header = () => {
             aria-label="Toggle menu"
           >
             <svg
-              className="w-6 h-6 text-secondary"
+              className="w-6 h-6 text-primary"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
