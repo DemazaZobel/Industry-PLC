@@ -104,7 +104,7 @@ const ContactUs = () => {
       </div>
       {/* Social Media Icons */}
 
-      <div className="flex gap-10 -mt-60 text-3xl justify-center text-accent">
+      <div className="flex gap-10 -mt-40 text-3xl justify-center text-accent ">
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-secondary transition-transform transform hover:scale-110 p-4">
           <FaFacebookF />
         </a>
@@ -119,7 +119,7 @@ const ContactUs = () => {
         </a>
         <a href="https://instagram.com/yourinstagramhandle" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-secondary transition-transform transform hover:scale-110 p-4">
           <FaInstagram />
-        </a>
+        </a> 
       </div>
 
 
